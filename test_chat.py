@@ -52,7 +52,7 @@ class TestShowReasoning:
     def test_initial_state(self):
         """Verifica que el estado inicial de show_reasoning sea False."""
         from chat import show_reasoning
-        assert show_reasoning == False
+        assert not show_reasoning
     
     def test_toggle_behavior(self):
         """Verifica que el toggle de razonamiento funcione."""
