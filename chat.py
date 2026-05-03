@@ -48,8 +48,10 @@ def read_multiline_input(prompt_text="Tú:"):
                 continue
             
             lines.append(line)
-    except (EOFError, KeyboardInterrupt):
+    except EOFError:
         pass
+    except KeyboardInterrupt:
+        raise  # Re-raise para que main() pueda manejarlo
     
     return "\n".join(lines)
 
